@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Symptom Decision Tool</title>
+</head>
+<body>
+
+<h2>Health Decision Support Tool</h2>
+<p>This tool helps you decide when to seek medical care. It does not provide diagnoses.</p>
+
+<label>Do you have a fever for more than 3 days?</label>
+<select id="fever">
+  <option value="no">No</option>
+  <option value="yes">Yes</option>
+</select><br><br>
+
+<label>Do you have chest pain?</label>
+<select id="chest">
+  <option value="no">No</option>
+  <option value="yes">Yes</option>
+</select><br><br>
+
+<label>Do you have a persistent cough?</label>
+<select id="cough">
+  <option value="no">No</option>
+  <option value="yes">Yes</option>
+</select><br><br>
+
+<label>Are you experiencing severe headache?</label>
+<select id="headache">
+  <option value="no">No</option>
+  <option value="yes">Yes</option>
+</select><br><br>
+
+<label>Are you vomiting frequently?</label>
+<select id="vomit">
+  <option value="no">No</option>
+  <option value="yes">Yes</option>
+</select><br><br>
+
+<button onclick="check()">Check Recommendation</button>
+
+<p id="result"></p>
+
+<script>
+function check() {
+  let fever = document.getElementById("fever").value;
+  let chest = document.getElementById("chest").value;
+  let headache = document.getElementById("headache").value;
+
+  let result = "";
+
+  if (chest === "yes") {
+    result = "Seek urgent medical care.";
+  } else if (fever === "yes" && headache === "yes") {
+    result = "Consult a doctor soon.";
+  } else if (fever === "yes") {
+    result = "Monitor symptoms and consult a doctor if they persist.";
+  } else {
+    result = "Monitor at home.";
+  }
+
+  document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>
