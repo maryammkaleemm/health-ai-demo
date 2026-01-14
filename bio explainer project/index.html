@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Biology Helper</title>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f5f5f5;
+    }
+    .question {
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    button {
+      margin-right: 10px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    .answer {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Biology Concepts Explained</h1>
+
+  <!-- Fever -->
+  <div class="question">
+    <p><strong>Is fever always dangerous?</strong></p>
+    <button onclick="feverYes()">Yes</button>
+    <button onclick="feverNo()">No</button>
+    <div id="feverAnswer" class="answer"></div>
+  </div>
+
+  <!-- Immunity -->
+  <div class="question">
+    <p><strong>Does immunity help the body fight diseases?</strong></p>
+    <button onclick="immunityYes()">Yes</button>
+    <button onclick="immunityNo()">No</button>
+    <div id="immunityAnswer" class="answer"></div>
+  </div>
+
+  <!-- Antibiotics -->
+  <div class="question">
+    <p><strong>Do antibiotics work against viral infections?</strong></p>
+    <button onclick="antibioticsYes()">Yes</button>
+    <button onclick="antibioticsNo()">No</button>
+    <div id="antibioticsAnswer" class="answer"></div>
+  </div>
+
+  <!-- Enzymes -->
+  <div class="question">
+    <p><strong>Do enzymes speed up chemical reactions in the body?</strong></p>
+    <button onclick="enzymesYes()">Yes</button>
+    <button onclick="enzymesNo()">No</button>
+    <div id="enzymesAnswer" class="answer"></div>
+  </div>
+
+</body>
+</html>
